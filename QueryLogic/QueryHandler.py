@@ -12,7 +12,7 @@ def getDMs(InheritedapiFunction):
         workValue = messageList[i]
         creationAttribute = getattr(workValue,'message_create')
         messageFrom = creationAttribute['sender_id']
-        if(messageFrom =='1377922691697668096'):
+        if(messageFrom ==''):
             messageText = creationAttribute['message_data']['text']
             messageText = int(messageText)
             return messageText
@@ -45,7 +45,7 @@ def getMentions(apiFunction, largeMentionList): #Public
 def sendDMToSelf(SendApiFunction,tweetId):
     Logging.loggerCode.updateLog("Message send attempt with content: " + tweetId)
     try:
-        SendApiFunction.send_direct_message(1377922691697668096,tweetId)
+        SendApiFunction.send_direct_message(,tweetId)
     except:
         Logging.loggerCode.updateLog("Message send attempt with content: " + tweetId + " failed.")
         return -1
