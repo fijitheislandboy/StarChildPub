@@ -1,7 +1,7 @@
 import Authentication.login,tweepy, Status.MakeStatus
 import Logging.loggerCode
 import QueryLogic.QueryHandler
-
+#Note: This is not the version of main used on the server, however the functions used are identical to the ones used on the server.
 logEvents = Logging.loggerCode
 credVal = 0
 allMentions = []
